@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.container{
+            display: grid;
+            grid-template: repeat(3, minmax(100px, auto)) / repeat(4, minmax(100px, auto));
+            grid-auto-flow: row;
+            grid-auto-rows: minmax(100px, auto);
+            border: 3px solid black;
+            grid-template-areas: 
+            "primeiro primeiro primeiro primeiro"
+            "segundo terceiro terceiro terceiro"
+            "segundo terceiro terceiro terceiro";
+            gap: 5px 10px;
+
+        }
+        div.primeira{
+            background-color: yellow;
+            grid-area: primeiro;
+        }
+        div.segunda{
+            background-color: orange;
+            grid-area: segundo;
+        }
+        div.terceira    {
+            background-color: red;
+            grid-area: terceiro;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="primeira">
+
+        </div>
+        <div class="segunda">
+
+        </div>
+        <div class="terceira">
+
+        </div>
+    </div>
+</body>
+</html>

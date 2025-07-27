@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade grid</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, minmax(100px, 1fr));
+            grid-template-rows: repeat(2, minmax(100px, auto));
+            grid-auto-flow: row;
+            grid-auto-rows: minmax(100px, auto);
+            
+            border: 3px solid black;
+        }
+        .container div{
+            background-color: red;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>Caixa1</div>
+        <div></div>
+        <div>Caixa3</div>
+        <div>Caixa4</div>
+        <div>Caixa </div>
+        <div>Caixa6</div>
+        <div>Caixa7</div>
+        <div>Caixa8</div>
+        <div>Caixa9</div>
+        <div>Caixa10 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus vitae, beatae, et ipsum labore velit natus necessitatibus aperiam at dolor ullam maiores numquam modi laudantium ratione libero. Placeat, voluptatem libero.</div>
+    </div>
+</body>
+</html>
