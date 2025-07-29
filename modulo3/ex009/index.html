@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elementos</title>
+    <style>
+        p{
+            width: 100%;
+            text-align: left;
+            font-size: 1.5em;
+            display: none;
+        }
+        p::after{
+            content: "👀";
+        }
+        p::before{
+            content: "👀";
+        }
+        div.container{
+            width: 300px;
+            height: 300px;
+            background-color: seashell;
+            border: 1px solid black;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            background-image: url(images/27460.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        div.container::before{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(transparent, rgb(189, 243, 250));
+            z-index: 1;
+            mix-blend-mode: difference;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>After-Before</h1>
+    <p>before and after</p>
+    <div class="container">
+
+    </div>
+</body>
+</html>

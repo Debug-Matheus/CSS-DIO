@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elementos</title>
+    <style>
+        input::file-selector-button{
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>file-selector-button</h1>
+    <p>Permite estilizar a seleção de textos no navegador</p>
+    <form action="#" autocomplete="on" method="get" >
+        <label for="ifile">Upload de arquivos</label>
+        <input type="file" name="file" id="ifile">
+    </form>
+</body>
+</html>
