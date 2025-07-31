@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elementos</title>
+    <style>
+        h2:target{
+            background-color: gold;
+        }
+        h2:target::before{
+            content: "👀";
+        }
+    </style>
+</head>
+<body>
+    <h1>Target</h1>
+    <ol>
+        <li>
+            <a href="#p1">Pular para o primeiro paragrafo</a>
+        </li>
+        <li>
+            <a href="#p2">Pular para o segundo paragrafo</a>
+        </li>
+        <li>
+            <a href="#p3">Pular para o terceiro paragrafo</a>
+        </li>
+    </ol>
+
+    <h2 id="p1">Primeiro paragrafo</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta tenetur ducimus odio dolorem, totam error perferendis officiis, tempora dolore doloribus, cupiditate nisi ipsum eligendi hic consequatur minima. Eligendi, animi exercitationem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima culpa veritatis quibusdam quidem, quisquam debitis tenetur repellendus nesciunt quia ipsam obcaecati temporibus, inventore accusamus in tempore hic nemo explicabo. Quas!</p>
+
+    <h2 id="p2">Segundo paragrafo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptatem, quam facere quo commodi, debitis corrupti culpa repellendus pariatur saepe, aut consequatur! Eveniet illum nesciunt numquam alias, quos eaque cum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aut sunt nam iusto officiis magnam id est, blanditiis porro voluptates dicta laboriosam nulla error a eaque voluptate perferendis corrupti at. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia labore sunt ad laborum quidem similique eligendi ullam consequatur possimus eveniet harum laboriosam incidunt itaque maxime cumque magnam, impedit sit! Pariatur.</p>
+    <h2 id="p3">Terceiro paragrafo</h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, asperiores? Corporis quasi saepe asperiores cum, atque laborum eos perspiciatis vel at ea quibusdam similique incidunt illo maiores quas reiciendis. Quis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum excepturi unde quasi eos laborum ipsa animi laudantium nemo necessitatibus enim, dolor possimus eaque aut, alias optio nostrum doloremque <dignissimos class="lore"></dignissimos>
+</body>
+</html>

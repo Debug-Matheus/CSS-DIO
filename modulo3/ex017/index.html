@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elementos</title>
+    <style>
+        input[type="checkbox"]{
+            accent-color: red
+            ;
+        }
+        input[type="checkbox"]:checked + label{
+            text-decoration: line-through;
+            color: red;
+        }
+        input[type="radio"]:checked + label{
+            color: red;
+        }
+        input[type="checkbox"]:checked{
+            accent-color: red;
+        }
+        option:checked{
+            background-color: green;
+        }
+        progress:indeterminate{
+            accent-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Checked and Indeterminate</h1>
+    <div>
+        <input type="checkbox" name="tarefa1" id="itarefa1">
+        <label for="itarefa1">Tarefa 1</label>
+    </div>
+    <div>
+        <input type="checkbox" name="tarefa2" id="itarefa2">
+        <label for="itarefa2"> Tarefa 2</label>
+    </div>
+    <div>
+        <input type="checkbox" name="tarefa3" id="itarefa3">
+        <label for="itarefa3"> Tarefa 3</label>
+    </div>
+    <div>
+        <input type="checkbox" name="tarefa4" id="itarefa4">
+        <label for="itarefa4"> Tarefa 4</label>
+    </div>
+    <hr>
+    <input type="radio" name="sexo" id="imasculino" checked>
+    <label for="imasculino">Masculino</label>
+    <input type="radio" name="sexo" id="ifeminino">
+    <label for="ifeminino">Feminino</label>
+    <input type="radio" name="sexo" id="ioutro">
+    <label for="ioutro">Outro</label>
+    <hr>
+    <label for="iescolha">Escolha</label>
+    <select name="escolha" id=" iescolha">
+        <option value="" selected>--- Escolha ---</option>
+        <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+    </select>
+    <hr>
+    <progress></progress>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elementos</title>
+    <style>
+        input{
+            padding: 5px;
+    
+        }
+        label{
+            font-size: 1.2rem;
+        }
+        
+        input:focus{
+            background-color: rgba(255, 0, 0, 0.158);
+            border: 3px solid rgb(0, 4, 255);
+        }
+        input[type="submit"]:focus{
+            background-color: rgba(0, 128, 0, 0.767);
+            color: white;
+        }
+        input[type="reset"]:focus{
+            background-color: rgba(255, 0, 0, 0.767);
+            color: white;
+        }
+        select{
+            padding: 5px;
+        }
+        select:focus{
+            background-color: rgba(255, 251, 0, 0.158);
+        }
+        label:focus-within{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Focus, Focus Within e Focus Visible</h1>
+    <form action="#" method="get" autocomplete="on">
+        <label for="inome">Nome Completo:
+            <input type="text" name="nome" id="inome" placeholder="Digite seu nome">
+        </label> 
+        <p>
+            <label for="iescolha">Sorvetes:
+                <select name="escolha" id="iescolha">
+                <option value="" selected>--- Escolha ---</option>
+                <option value="Morango">Morango</option>
+                <option value="Chocolate">Chocolate</option>
+                <option value="Abacaxi">Abacaxi</option>
+                <option value="Lima">Lima</option>
+                <option value="Banana">Banana</option>
+            </select>
+            </label> 
+            
+            <p><input type="submit" value="Finalizar Pedido">
+            <input type="reset" value="Limpar"></p>
+        </p>
+    </form>
+</body>
+</html>

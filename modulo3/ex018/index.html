@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elementos</title>
+    <style>
+        
+        .container{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            margin: 6px;
+
+        }
+        form{
+            background-color: rgba(128, 128, 128, 0.288);
+            padding: 25px;
+            border-radius: 10px;
+            width: 245px; 
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: start;
+        }
+        input{
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+            margin-top: 5px;
+        }
+        input:in-range, input:valid{
+            border: 1px solid darkgreen;
+            color: darkgreen
+        }
+        input:out-of-range, input:invalid{
+            border: 1px solid red;
+            color: red
+        }
+        .error{
+            display: block;
+            color: red;
+            font-size: 0.75rem;
+            display: none;
+            margin-top: 4px;
+        }
+        input:invalid + .error{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-Classes</h1>
+    <ul>
+        <li>:invalid</li>
+        <li>:valid</li>
+        <li>:in-range</li>
+        <li>:out-of-range</li>
+    </ul>
+    <hr>
+    <div class="container">
+        <form action="#" method="get" autocomplete="on">
+            <h3>Faça sua compra</h3>
+            <p>
+                <label for="iemail">
+                    Email: <br>
+                    <input type="email" name="email" id="iemail" placeholder="Digite seu email" required>
+                    <span class="error">
+                        Campo inválido
+                    </span>
+                </label>
+            </p>
+            <p>
+                <label for="icodigo">Código Produto:
+
+                    <input type="number" name="codigo" id="icodigo" min="1000">
+                    <span class="error">
+                        Campo invalido
+                    </span>
+                </label>
+            </p>
+            <p>
+                <label for="icupom">Cupom de Desconto: 
+                    <input type="text" name="cupom" id="icupom" pattern="[a-z]+" placeholder="Apenas letras minusculas">
+                    <span class="error">
+                        Campo invalido
+                    </span>
+                </label>
+            </p>
+            <p>
+                <label for="idata">Data de Nascimento: <br>
+                    <input type="date" name="data" id="idata" min="1962-01-01" max="2004-12-01">
+                    <span class="error">
+                        Campo invalido
+                    </span>
+                </label>
+            </p>
+            <p>
+                <label for="inumero">Quantidade: <br>
+                    <input type="number" name="numero" id="inumero" min="1" max="10">
+                    <span class="error">
+                        Campo invalido
+                    </span>
+                </label>
+            </p>
+            <p>
+                
+                <label for="iaceito">
+                    <input type="checkbox" name="aceito" id="iaceito" required>
+                    <span>
+                    Li e aceito os termos de uso
+                    </span>
+                </label>
+            <p>
+                <button type="submit">Comprar</button>
+                <button type="reset">Limpar</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

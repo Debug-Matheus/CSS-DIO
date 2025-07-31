@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(247, 247, 247);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    background-image: url(images/27460.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.box:hover{
+    transform: rotate(50deg);   
+}
