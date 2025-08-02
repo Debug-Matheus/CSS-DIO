@@ -8,18 +8,18 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    perspective: 300px;
 }
 .box{
-    background-image: url(images/27460.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center bottom;
+    background-image: linear-gradient(90deg, #FF0000, #FF8000, #FFFF00, #00FF00);
     width: 200px;
     height: 200px;
     border-radius: 8px;
-    transition: transform 0.5s ease-in-out;
-}
-
-.box:hover{
-    transform: rotateY(50deg);   
+    position: absolute;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
 }

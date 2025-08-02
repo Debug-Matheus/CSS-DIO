@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(247, 247, 247);
@@ -8,18 +9,17 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    perspective: 300px;
+    perspective-origin: 80% 50%;
 }
 .box{
-    background-image: url(images/27460.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center bottom;
+    background-image: linear-gradient(90deg, #FF0000, #FF8000, #FFFF00, #00FF00);
     width: 200px;
     height: 200px;
     border-radius: 8px;
+    transform: rotateY(50deg);
     transition: transform 0.5s ease-in-out;
 }
-
 .box:hover{
-    transform: rotateY(50deg);   
+    transform: rotateY(360deg);   
 }
