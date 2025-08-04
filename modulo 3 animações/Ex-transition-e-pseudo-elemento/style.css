@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(247, 247, 247);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list{
+    background-color: #d53369;
+    padding: 0;
+}
+.list li{
+    list-style: none;
+    color: white;
+    font-weight: bold;
+    padding: 12px 32px;
+    margin-bottom: 4px;
+    transition: background-color 0.6s;
+}
+.list li:hover{
+    background-color: #b02151;
+}
+.list input{
+    accent-color: #daae51;
+}
+.list input:checked + span{
+    text-decoration: line-through;
+}
+.list li:has(input:checked){
+    background-color: #f0ab1a;
+    color: #d53369;
+}
