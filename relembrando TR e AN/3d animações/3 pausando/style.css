@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    animation-name: exemplo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.438));
+}
+@keyframes exemplo{
+    0%{
+       background-color: blueviolet;
+       transform: translateY(32vh);
+    }
+    50%{
+       background-color: darkgreen;
+       width: 400px;
+       transform: translateY(-35vh);
+    }
+    100%{
+        background-color: coral;
+        trasform: translateX(50px);
+       transform: translateY(32vh);
+    }
+}
+.box:hover{
+    animation-play-state: paused;
+}

@@ -18,5 +18,5 @@ body{
 }
 
 .box:hover{
-    transform: skewY(-25deg);   
+    transform: skewX(-25deg);   
 }

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Quanto maior em px for a prespectiva, menor será a perspectiva da figura e vice versa */
+    /* ----------------- */
+
+    /* A perspectiva vai dar ume efeito 3d mais realista, em que figura realmente está girando */
+    perspective: 300px;
+
+    /* A perspectiva-origin vai determinar uma posição inicial da */
+    perspective-origin: center top
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(45deg, red, blue);
+    /* rotateY() em prespectiva, com o valor positivo ele vai girar em sentido horario, e com o negativo ele vai girar em sentido antihorario, ou seja, da direita pra esquerda e vice versa  */
+
+    /* ----------- */
+    
+    /* rotateX() em prespectiva, com o valor positivo ele vai girar em sentido horario, e com o negativo ele vai girar em sentido antihorario, ou seja, de cima pra baixo e vice versa  */
+    /* ------------------- */
+
+    /* rotate() ele vai girar em sentido horario (Literamente girando), e com o negativo ele vai girar em sentido antihorario. rotateZ() vai ser a mesma coisa que o rotate()*/
+    transform: rotatey(50deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.box:hover{
+    transform: rotatey(360deg);
+}
